@@ -1,0 +1,16 @@
+Admin
+As an admin, I want to add movies so that users can browse them.
+As an admin, I want to update movie details so that information stays accurate.
+As an admin, I want to delete movies so that outdated content can be removed.
+As an admin, I want to add theatres and show timings so that users can book tickets.
+As an admin, I want to moderate reviews and comments so that the platform stays safe.
+
+
+User
+As a user, I want to sign up and log in so that I can use personalized features.
+As a user, I want to search for movies so that I can quickly find what I want.
+As a user, I want to view movie details and show timings so that I can decide whether to book.
+As a user, I want to book tickets so that I can watch a movie.
+As a user, I want to view my bookings so that I can track my tickets.
+As a user, I want to like reviews or movies so that I can express my interest.
+As a user, I want to comment and reply so that I can join discussions.
