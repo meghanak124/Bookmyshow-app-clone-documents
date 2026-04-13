@@ -1,0 +1,76 @@
+erDiagram
+
+    USER {
+        int id PK
+        string username
+        string email
+        string password
+        datetime created_at
+    }
+
+    MOVIE {
+        int id PK
+        string title
+        string genre
+        int duration
+        string language
+        datetime release_date
+    }
+
+    THEATRE {
+        int id PK
+        string name
+        string location
+    }
+
+    SHOW {
+        int id PK
+        int movie_id FK
+        int theatre_id FK
+        datetime show_time
+        int total_seats
+    }
+
+    BOOKING {
+        int id PK
+        int user_id FK
+        int show_id FK
+        int seats_booked
+        datetime booking_time
+    }
+
+    REVIEW {
+        int id PK
+        int user_id FK
+        int movie_id FK
+        text content
+        int rating
+        datetime created_at
+    }
+
+    LIKE {
+        int id PK
+        int user_id FK
+        int review_id FK
+    }
+
+
+    COMMENT {
+        int id PK
+        int user_id FK
+        int movie_id FK
+        int parent_id FK
+        text content
+        datetime created_at
+    }
+
+    USER ||--o{ BOOKING : makes
+    MOVIE ||--o{ SHOW : has
+    THEATRE ||--o{ SHOW : hosts
+    SHOW ||--o{ BOOKING : booked_in
+    USER ||--o{ REVIEW : writes
+    MOVIE ||--o{ REVIEW : has
+    USER ||--o{ LIKE : gives
+    USER ||--o{ COMMENT : writes
+    MOVIE ||--o{ COMMENT : has
+    COMMENT ||--o{ COMMENT : replies_to
